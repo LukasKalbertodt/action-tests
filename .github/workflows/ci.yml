@@ -11,6 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: date > date.txt
+    - run: |
+        echo $BANANA
+        echo $BANANA | wc -c
+      env:
+        BANANA: ${{ secrets.PETER }}
 
     - name: Archive deployment files as artifact
       uses: actions/upload-artifact@v3
