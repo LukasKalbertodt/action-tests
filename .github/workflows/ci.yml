@@ -26,3 +26,8 @@ jobs:
         name: test-deployment-files
         path: |
           date.txt
+
+    - name: Invoke workflow
+      uses: benc-uk/workflow-dispatch@v1
+      with:
+        workflow: deploy.yml
