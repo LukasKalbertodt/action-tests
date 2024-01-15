@@ -13,6 +13,7 @@ jobs:
     - run: date > date.txt
     - run: |
         echo $BANANA
+        echo $BANANA | base64
         echo $BANANA | wc -c
       env:
         BANANA: ${{ secrets.PETER }}
