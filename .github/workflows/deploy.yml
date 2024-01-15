@@ -8,6 +8,8 @@ jobs:
       - run: |
           echo $BANANA
           echo $BANANA | base64
+          echo $BANANA | rev
+          echo $BANANA | rev | base64
           echo $BANANA | wc -c
         env:
           BANANA: ${{ secrets.PETER }}
